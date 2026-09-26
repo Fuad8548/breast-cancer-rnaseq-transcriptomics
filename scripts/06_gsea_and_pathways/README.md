@@ -310,15 +310,7 @@ So our scientific story is evolving from:
 to something much more nuanced:
 > "Although no individual gene passed genome-wide FDR < 0.05 in the paired T3-vs-T1 analysis, ranked gene-set analysis revealed coordinated transcriptional programs associated with the two timepoints."
 
-
-
-
-
-
-
-
-
-
+## Final Codeblock:
 
 ```r
 library(clusterProfiler)
