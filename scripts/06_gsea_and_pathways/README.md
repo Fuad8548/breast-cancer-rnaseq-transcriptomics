@@ -80,7 +80,7 @@ They're disproportionately concentrated toward the **T3 end**.
 GSEA asks:
 > Are the genes belonging to this biological pathway unusually concentrated toward one end of our ranked transcriptome?
 
-## Step 3: What does gseGO() mean?
+## Step 3: What does `gseGO()` mean?
 
 ```r
 gsea_go_bp <- gseGO(
@@ -252,7 +252,7 @@ Therefore:
 > 863 significant GO terms does not mean 863 independent biological discoveries.
 This is why we introduced `simplify()`.
 
-## Step 8: What does simplify() actually do?
+## Step 8: What does `simplify()` actually do?
 
 ```r
 gsea_go_simplified <- simplify(
@@ -322,16 +322,7 @@ gene_list <- readRDS(
 
 length(gene_list)
 head(gene_list)
-```
 
-Output:
-```bash
-12665
-```
-because we previously had 12,665 unique Entrez genes in the final ranked list.
-
-Then run:
-```r
 gsea_go_bp <- gseGO(
     geneList = gene_list,
     OrgDb = org.Hs.eg.db,
@@ -343,40 +334,30 @@ gsea_go_bp <- gseGO(
     pAdjustMethod = "BH",
     verbose = TRUE
 )
-```
 
-Then verify:
-```r
 nrow(as.data.frame(gsea_go_bp))
-```
 
-and:
-```r
 sum(as.data.frame(gsea_go_bp)$p.adjust < 0.05, na.rm = TRUE)
-```
-We should recover approximately the **863 significant GO BP terms** you obtained previously.
 
-Then run:
-```r
 gsea_go_simplified <- simplify(
     gsea_go_bp,
     cutoff = 0.7,
     by = "p.adjust",
     select_fun = min
 )
+
+# Save the final simplified GSEA object
+saveRDS(gsea_go_simplified, file = "data/processed/gsea_go_simplified_T3_vs_T1.rds")
+
+# Reload the saved clusterProfiler object
+library(clusterProfiler)
+
+gsea_res <- readRDS("data/processed/gsea_go_simplified_T3_vs_T1.rds")
+
+# We can now immediately use it for plots or dataframes
+dotplot(gsea_res)
+go_simple_df <- as.data.frame(gsea_res)
 ```
-
-then:
-```r
-go_simple_df <- as.data.frame(gsea_go_simplified)
-
-nrow(go_simple_df)
-```
-
-
-
-
-
 
 
 
