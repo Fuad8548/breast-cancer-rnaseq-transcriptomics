@@ -107,10 +107,9 @@ write.csv(
 # -------------------------
 # DESeq2 object
 # -------------------------
-int_counts_fil = round(counts_filtered)
 
 dds <- DESeqDataSetFromMatrix(
-  countData = int_counts_fil,
+  countData = counts_filtered,
   colData = metadata,
   design = ~ patient_id + timepoint
 )

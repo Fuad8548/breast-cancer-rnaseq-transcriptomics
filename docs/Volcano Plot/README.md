@@ -77,8 +77,6 @@ FDR < 0.05
     ↓
 0 genes
 
-
-
 # How to read our volcano plot
 
 **Left vs Right**

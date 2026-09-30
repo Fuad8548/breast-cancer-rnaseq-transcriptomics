@@ -100,7 +100,7 @@ So part of bioinformatics is **identifier translation**.
 `clusterProfiler` explicitly provides ID-conversion tools, and its GO/KEGG GSEA functions work with ranked gene lists.
 
 
-## 5. Now the interesting part: why GSEA?
+## 5. why GSEA?
 Think of this:
 ```text
 Strongest T3 evidence
