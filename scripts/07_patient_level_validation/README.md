@@ -18,7 +18,7 @@ library(org.Hs.eg.db)
 library(ggplot2)
 
 dds <- readRDS(
-    "data/processed/dds_T1_T3_fitted.rds"
+    "r_objects/dds_T1_T3_fitted.rds"
 )
 ```
 

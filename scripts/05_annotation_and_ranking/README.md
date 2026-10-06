@@ -16,7 +16,7 @@ library(clusterProfiler)
 ## 2. Reload our fitted DESeq2 model
 ```r
 dds <- readRDS(
-    "data/processed/dds_T1_T3_fitted.rds"
+    "r_objects/dds_T1_T3_fitted.rds"
 )
 ```
 

@@ -2,7 +2,7 @@
 This was the purpose of:
 ```r
 gene_list <- readRDS(
-    "data/processed/gene_list_T3_vs_T1_Entrez.rds"
+    "r_objects/gene_list_T3_vs_T1_Entrez.rds"
 )
 ```
 
@@ -317,7 +317,7 @@ library(clusterProfiler)
 library(org.Hs.eg.db)
 
 gene_list <- readRDS(
-    "data/processed/gene_list_T3_vs_T1_Entrez.rds"
+    "r_objects/gene_list_T3_vs_T1_Entrez.rds"
 )
 
 length(gene_list)
@@ -347,12 +347,12 @@ gsea_go_simplified <- simplify(
 )
 
 # Save the final simplified GSEA object
-saveRDS(gsea_go_simplified, file = "data/processed/gsea_go_simplified_T3_vs_T1.rds")
+saveRDS(gsea_go_simplified, file = "r_objects/gsea_go_simplified_T3_vs_T1.rds")
 
 # Reload the saved clusterProfiler object
 library(clusterProfiler)
 
-gsea_res <- readRDS("data/processed/gsea_go_simplified_T3_vs_T1.rds")
+gsea_res <- readRDS("r_objects/gsea_go_simplified_T3_vs_T1.rds")
 
 # We can now immediately use it for plots or dataframes
 dotplot(gsea_res)

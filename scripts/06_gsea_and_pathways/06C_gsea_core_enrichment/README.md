@@ -421,7 +421,7 @@ candidate_t3 <- gene_frequency
 
 de_results <- as.data.frame(
     results(
-        readRDS("data/processed/dds_T1_T3_fitted.rds"),
+        readRDS("r_objects/dds_T1_T3_fitted.rds"),
         contrast = c("timepoint", "T3", "T1")
     )
 )

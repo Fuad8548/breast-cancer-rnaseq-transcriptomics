@@ -23,7 +23,7 @@ dir.create("results/figures", recursive = TRUE, showWarnings = FALSE)
 # -------------------------------------------------------------------
 
 dds <- readRDS(
-  "data/processed/dds_T1_T3_fitted.rds"
+  "r_objects/dds_T1_T3_fitted.rds"
 )
 
 vsd <- vst(

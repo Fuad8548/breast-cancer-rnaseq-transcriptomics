@@ -19,7 +19,7 @@ suppressPackageStartupMessages({
 # 2. Load fitted DESeq2 object
 # ------------------------------------------------------------
 
-dds_file <- "data/processed/dds_T1_T3_fitted.rds"
+dds_file <- "r_objects/dds_T1_T3_fitted.rds"
 
 if (!file.exists(dds_file)) {
   stop(
@@ -178,7 +178,7 @@ dir.create(
 )
 
 dir.create(
-  "data/processed",
+  "r_objects",
   recursive = TRUE,
   showWarnings = FALSE
 )
@@ -320,7 +320,7 @@ write.csv(
 
 saveRDS(
   gene_rank,
-  "data/processed/gene_list_T3_vs_T1_Entrez.rds"
+  "r_objects/gene_list_T3_vs_T1_Entrez.rds"
 )
 
 # ------------------------------------------------------------
@@ -375,7 +375,7 @@ cat(
   "  results/differential_expression/ranked_gene_list_for_GSEA.csv\n"
 )
 cat(
-  "  data/processed/gene_list_T3_vs_T1_Entrez.rds\n"
+  "  r_objects/gene_list_T3_vs_T1_Entrez.rds\n"
 )
 
 cat("\nScript 05 completed successfully.\n")

@@ -27,7 +27,7 @@ dir.create("results/candidates", recursive = TRUE, showWarnings = FALSE)
 # -------------------------------------------------------------------
 
 gene_list <- readRDS(
-  "data/processed/gene_list_T3_vs_T1_Entrez.rds"
+  "r_objects/gene_list_T3_vs_T1_Entrez.rds"
 )
 
 stopifnot(length(gene_list) > 1000)
@@ -258,7 +258,7 @@ write.csv(
 # -------------------------------------------------------------------
 
 dds <- readRDS(
-  "data/processed/dds_T1_T3_fitted.rds"
+  "r_objects/dds_T1_T3_fitted.rds"
 )
 
 res <- results(

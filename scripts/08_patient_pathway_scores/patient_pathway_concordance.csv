@@ -1,0 +1,5 @@
+"signature","n_pairs","median_delta","expected_direction","patients_expected_direction","percent_expected_direction"
+"T1_ECM_Junction",24,-0.00464695895594772,-1,12,50
+"T1_Metabolism",24,-0.0351837313676218,-1,16,66.6666666666667
+"T3_Chromosome_Segregation",24,0.0460011702369547,1,16,66.6666666666667
+"T3_DNA_Replication_Repair",24,0.0563708818359547,1,16,66.6666666666667

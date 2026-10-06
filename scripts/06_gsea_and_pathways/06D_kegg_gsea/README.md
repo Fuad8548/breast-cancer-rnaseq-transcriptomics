@@ -48,7 +48,7 @@ library(clusterProfiler)
 library(org.Hs.eg.db)
 
 gene_list <- readRDS(
-    "data/processed/gene_list_T3_vs_T1_Entrez.rds"
+    "r_objects/gene_list_T3_vs_T1_Entrez.rds"
 )
 
 length(gene_list)
