@@ -90,12 +90,12 @@ go_simple_df <- as.data.frame(gsea_go_simplified)
 
 saveRDS(
   gsea_go_simplified,
-  "results/enrichment/gsea_GO_BP_T3_vs_T1_simplified.rds"
+  "r_objects/gsea_GO_BP_T3_vs_T1_simplified.rds"
 )
 
 write.csv(
   go_simple_df,
-  "results/enrichment/GO_BP_GSEA_T3_vs_T1_simplified.csv",
+  "scripts/05_gsea_pathways/GO_GSEA/GO_BP_GSEA_T3_vs_T1_simplified.csv",
   row.names = FALSE
 )
 

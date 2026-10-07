@@ -5,7 +5,7 @@
 
 go_simple_df <- as.data.frame(
     readRDS(
-        "results/enrichment/gsea_GO_BP_T3_vs_T1_simplified.rds"
+        "r_objects/gsea_GO_BP_T3_vs_T1_simplified.rds"
     )
 )
 
@@ -67,7 +67,7 @@ p_go <- ggplot(
 
 
 ggsave(
-    "results/figures/Figure3_GO_GSEA.pdf",
+    "GO_GSEA.pdf",
     p_go,
     width = 10,
     height = 8
